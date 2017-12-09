@@ -7,7 +7,7 @@
     'license': 'AGPL-3',
     'maintainer': 'dominic.krimmer@gmail.com',
     'website': 'https://www.plastinorte.com',
-    'summary': 'Colombian Taxes: Invoice Module - Odoo 9.0',
+    'summary': 'Colombian Taxes: Invoice Module - Odoo 10.0',
     'images': ['images/'],
     'description': """
 Colombia Impuestos:
