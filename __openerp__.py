@@ -19,7 +19,6 @@ Colombia Impuestos:
         'account',
         'sale',
         'purchase',
-        'l10n_co'
     ],
     'data': [
         'security/ir.model.access.csv',
