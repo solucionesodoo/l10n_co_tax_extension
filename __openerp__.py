@@ -19,6 +19,7 @@ Colombia Impuestos:
         'account',
         'sale',
         'purchase',
+        'l10n_co_res_partner',
     ],
     'data': [
         'security/ir.model.access.csv',
