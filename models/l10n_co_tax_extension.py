@@ -262,8 +262,6 @@ class AccountInvoice(models.Model):
                                             tax_grouped[key] = val
                                         else:
                                             tax_grouped[key]['amount'] += val['amount']
-            else:
-                raise UserError(_('Debe definir una posicion fiscal para el partner asociado a la compañía actual'))
 
             if self.fiscal_position_id:
                 fp = self.env['account.fiscal.position'].search([('id','=',self.fiscal_position_id.id)])
