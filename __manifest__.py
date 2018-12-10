@@ -25,5 +25,37 @@
 # You should have received a copy of the GNU Affero General Public License    #
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
+{
+	'name': 'Colombia - Impuestos',
+	'category': 'Localization',
+	'version': '11.0',
+	'author': 'Luis Alfredo da Silva, Dominic Krimmer, Plastinorte S.A.S, Odoo LoCo',
+	'license': 'AGPL-3',
+	'maintainer': 'dominic.krimmer@gmail.com',
+	'website': 'https://www.plastinorte.com',
+	'summary': 'Colombian Taxes: Invoice Module - Odoo 11.0',
+	'images': ['images/'],
+	'description': """
+Colombia Impuestos:
+======================
+	* This module calculates some Colombian taxes that have to apply
+	* First tax: withholding tax, which is calculated by 2,4% from the untaxed amount and calculated with the total amount
+	""",
+	'depends': [
+		'account',
+		'sale',
+		'purchase',
+		'l10n_co_res_partner'
+	],
+	'data': [
+		'security/ir.model.access.csv',
+		'views/l10n_co_tax_extension.xml',
+		'views/report_invoice.xml',
+		'views/ir_sequence_view.xml'
+	],
+	'installable': True,
+	'application': True,
+	'auto_install': False,
+}
 
-from . import models
+

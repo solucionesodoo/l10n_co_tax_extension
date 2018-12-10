@@ -1,8 +1,16 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 #                                                                             #
-# Copyright (C) 2016  Dominic Krimmer                                         #
-#                     Luis Alfredo da Silva (luis.adasilvaf@gmail.com)        #
+#                                                                             #
+# Part of Odoo. See LICENSE file for full copyright and licensing details.    #
+#                                                                             #
+#                                                                             #
+# Copyright (C) Dominic Krimmer (Plastinorte S.A.S).                          #
+# Author        Dominic Krimmer, dominic.krimmer@gmail.com                    #
+#                                                                             #
+# Co-Authors    Odoo LoCo                                                     #
+#               Localización funcional de Odoo para Colombia                  #
+#                                                                             #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -18,20 +26,17 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
-from openerp import api, fields, models
-
-
-from openerp.exceptions import UserError, ValidationError
-from openerp.tools.translate import _
-from openerp.tools import float_is_zero, float_compare
-from openerp.addons.base.ir.ir_sequence import _update_nogap
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools.translate import _
+from odoo.tools import float_is_zero, float_compare, pycompat
+from odoo.tools.misc import formatLang, format_date
 from datetime import datetime, timedelta, date
-from openerp.exceptions import ValidationError
+from odoo.addons.base.ir.ir_sequence import _update_nogap
 
 import pprint
 import logging
 _logger = logging.getLogger(__name__)
-
 
 class IrSequence(models.Model):
     _name = 'ir.sequence'

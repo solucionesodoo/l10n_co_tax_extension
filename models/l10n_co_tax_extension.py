@@ -1,8 +1,16 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 #                                                                             #
-# Copyright (C) 2016  Dominic Krimmer                                         #
-#                     Luis Alfredo da Silva (luis.adasilvaf@gmail.com)        #
+#                                                                             #
+# Part of Odoo. See LICENSE file for full copyright and licensing details.    #
+#                                                                             #
+#                                                                             #
+# Copyright (C) Dominic Krimmer (Plastinorte S.A.S).                          #
+# Author        Dominic Krimmer, dominic.krimmer@gmail.com                    #
+#                                                                             #
+# Co-Authors    Odoo LoCo                                                     #
+#               Localización funcional de Odoo para Colombia                  #
+#                                                                             #
 #                                                                             #
 # This program is free software: you can redistribute it and/or modify        #
 # it under the terms of the GNU Affero General Public License as published by #
@@ -18,6 +26,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
 
+
 from openerp import api, fields, models
 
 import pprint
@@ -27,6 +36,7 @@ from openerp.tools import float_is_zero, float_compare
 from openerp.tools.misc import formatLang
 from datetime import datetime
 
+import pprint
 import logging
 _logger = logging.getLogger(__name__)
 
@@ -35,7 +45,7 @@ class AccountInvoice(models.Model):
     Colombia"""
 
     _description = 'Model to create and save withholding taxes'
-    _name = 'account.invoice'
+
     _inherit = 'account.invoice'
 
     @api.one
@@ -64,20 +74,17 @@ class AccountInvoice(models.Model):
             self.not_has_valid_dian = not_valid
 
     # Define withholding as new tax.
-    wh_taxes = fields.Monetary('Withholding Tax', store="True",
-                               compute="_compute_amount")
-
-    amount_without_wh_tax = fields.Monetary('Total With Tax', store="True",
-                                            compute="_compute_amount")
+    
+    amount_without_wh_tax = fields.Monetary('Total With Tax', store="True",compute="_compute_amount")
+    wh_taxes = fields.Float(string="Withholding Tax", store=True, compute="_compute_amount")
     date_invoice = fields.Date(required=True)
-
     not_has_valid_dian = fields.Boolean(compute='_get_has_valid_dian_info_JSON')
-
     resolution_number = fields.Char('Resolution number in invoice')
     resolution_date = fields.Date()
     resolution_date_to = fields.Date()
     resolution_number_from = fields.Integer("")
     resolution_number_to = fields.Integer("")
+
 
     # Calculate withholding tax and (new) total amount 
 
@@ -361,6 +368,8 @@ class AccountInvoice(models.Model):
             inv.resolution_number_from = sequence['number_from']
             inv.resolution_number_to = sequence['number_to']
         return result
+
+AccountInvoice()
 
 class AccountInvoiceLine(models.Model):
     _name = 'account.invoice.line'
