@@ -43,10 +43,22 @@ msgstr "Resolución activa"
 msgid "Amount"
 msgstr "Cantidad"
 
+
 #. module: l10n_co_tax_extension
-#: model:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
 msgid "Base"
 msgstr "Base"
+
+#. module: l10n_co_tax_extension
+#: model_terms:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
+msgid "Tax"
+msgstr "Impuestos"
+
+#. module: l10n_co_tax_extension
+#: model_terms:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
+msgid "Amount"
+msgstr "Importe"
+
 
 #. module: l10n_co_tax_extension
 #: model:ir.model.fields,field_description:l10n_co_tax_extension.field_account_tax_base_taxes
@@ -470,8 +482,7 @@ msgstr "|\n"
 
 
 #. module: l10n_co_tax_extension
-#: model:ir.model,name:l10n_co_tax_extension.model_account_invoice
-#: model:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
 msgid "Sales Invoice N°"
 msgstr "Factura de Venta N°"
 
@@ -542,14 +553,12 @@ msgid "No Foreign Identification"
 msgstr "SIN IDENTIFICACIÓN DEL EXTERIOR"
 
 #. module: l10n_co_tax_extension
-#: model:ir.model,name:l10n_co_tax_extension.model_account_invoice
-#: model:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
-msgid "Shipping address:"
-msgstr "Dirección de Envío:"
+#: model_terms:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>Dirección de Envío</strong>"
 
 #. module: l10n_co_tax_extension
 #: model:ir.model,name:l10n_co_tax_extension.model_account_invoice
 #: model:ir.ui.view,arch_db:l10n_co_tax_extension.report_invoice_document_inherit
 msgid "<strong>Shipping address:</strong>"
 msgstr "<strong>Dirección de Envío:</strong>"
-

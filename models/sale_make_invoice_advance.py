@@ -5,8 +5,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.    #
 #                                                                             #
 #                                                                             #
-# Copyright (C) Dominic Krimmer (Plastinorte S.A.S).                          #
-# Author        Dominic Krimmer, dominic.krimmer@gmail.com                    #
 #                                                                             #
 # Co-Authors    Odoo LoCo                                                     #
 #               Localización funcional de Odoo para Colombia                  #
@@ -31,8 +29,6 @@ from odoo import api, fields, models, _
 import time
 import odoo.addons.decimal_precision as dp
 from odoo.exceptions import UserError, ValidationError
-import logging
-_logger = logging.getLogger(__name__)
 
 class SaleAdvancePaymentInv(models.TransientModel):
     _name = "sale.advance.payment.inv"

@@ -5,8 +5,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.    #
 #                                                                             #
 #                                                                             #
-# Copyright (C) Dominic Krimmer (Plastinorte S.A.S).                          #
-# Author        Dominic Krimmer, dominic.krimmer@gmail.com                    #
 #                                                                             #
 # Co-Authors    Odoo LoCo                                                     #
 #               Localización funcional de Odoo para Colombia                  #
@@ -29,15 +27,16 @@
 	'name': 'Colombia - Impuestos',
 	'category': 'Localization',
 	'version': '12.0',
-	'author': 'Luis Alfredo da Silva, Dominic Krimmer, Plastinorte S.A.S, Odoo LoCo',
+	'author': 'Odoo LoCo',
 	'license': 'AGPL-3',
-	'maintainer': 'dominic.krimmer@gmail.com',
-	'website': 'https://www.plastinorte.com',
-	'summary': 'Colombian Taxes: Invoice Module - Odoo 11.0',
+	'maintainer': 'Odoo LoCo',
+	'website': 'https://github.com/odooloco',
+	'summary': 'Colombian Taxes: Invoice Module - Odoo 12.0',
 	'images': ['images/'],
 	'description': """
-Colombia Impuestos:
-======================
+
+	Colombia Impuestos:
+	======================
 	* This module calculates some Colombian taxes that have to apply
 	* First tax: withholding tax, which is calculated by 2,4% from the untaxed amount and calculated with the total amount
 	""",
@@ -50,12 +49,10 @@ Colombia Impuestos:
 	'data': [
 		'security/ir.model.access.csv',
 		'views/l10n_co_tax_extension.xml',
-		'views/report_invoice.xml',
+		'views/report_invoice_document_inherit.xml',
 		'views/ir_sequence_view.xml'
 	],
 	'installable': True,
 	'application': True,
 	'auto_install': False,
 }
-
-
