@@ -25,13 +25,13 @@
 ###############################################################################
 
 
-from openerp import api, fields, models
+from odoo import api, fields, models
 
 import pprint
-from openerp.exceptions import UserError, ValidationError
-from openerp.tools.translate import _
-from openerp.tools import float_is_zero, float_compare
-from openerp.tools.misc import formatLang
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools.translate import _
+from odoo.tools import float_is_zero, float_compare
+from odoo.tools.misc import formatLang
 from datetime import datetime
 
 import pprint

@@ -23,22 +23,22 @@
 # You should have received a copy of the GNU Affero General Public License    #
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
+
 {
-	'name': 'Colombia - Impuestos',
+	'name': 'Impuestos - Colombia',
 	'category': 'Localization',
-	'version': '12.0',
-	'author': 'Odoo LoCo',
-	'license': 'AGPL-3',
-	'maintainer': 'Odoo LoCo',
-	'website': 'https://github.com/odooloco',
-	'summary': 'Colombian Taxes: Invoice Module - Odoo 12.0',
+    'version': '12.0',
+    'author': 'Odoo LoCo',
+    'license': 'AGPL-3',
+    'maintainer': 'Odoo LoCo',
+    'website': 'https://github.com/odooloco',
+	'summary': 'Impuestos de Colombia: Modulo de Facturacion - Odoo 12.0',
 	'images': ['images/'],
 	'description': """
-
-	Colombia Impuestos:
-	======================
-	* This module calculates some Colombian taxes that have to apply
-	* First tax: withholding tax, which is calculated by 2,4% from the untaxed amount and calculated with the total amount
+Impuestos Colombia:
+======================
+	* Este módulo calcula algunos impuestos colombianos que deben aplicarse.
+	* Primer impuesto: retención de impuestos, que se calcula en un 2,4% del monto no tributado y se calcula con el monto total
 	""",
 	'depends': [
 		'account',
