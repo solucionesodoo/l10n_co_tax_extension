@@ -46,6 +46,18 @@ class AccountInvoice(models.Model):
 
 	_inherit = 'account.invoice'
 
+
+	def validate_number_phone(self, data):
+		if data.phone and data.mobile:
+			return data.phone + ' - ' + data.mobile
+		if data.phone and not data.mobile:
+			return data.phone
+		if data.mobile and not data.phone:
+			return data.mobile
+
+	def validate_state_city(self, data):
+		return ((data.country_id.name + ' ') if data.country_id.name else ' ') + ( ' ' + (data.state_id.name + ' ') if data.state_id.name else ' ') + (' ' + data.xcity.name if data.xcity.name else '')
+
 	@api.one
 	def _get_has_valid_dian_info_JSON(self):
 		if self.journal_id.sequence_id.use_dian_control:
